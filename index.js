@@ -1,4 +1,4 @@
-var sinchRequest = require('../node-sinch-request/index')
+var sinchRequest = require('sinch-request')
 var assert = require('assert-plus');
 var https = require('https');
 var Q = require('q');
