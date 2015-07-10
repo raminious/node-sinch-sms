@@ -38,10 +38,10 @@ New to Sinch? In order to get started, please visit [our website](http://www.sin
 
 ## Methods
 
-- __send__(number, message) - Send SMS message `message` to `number`
+- __send__(number, message) - Send SMS `message` to `number`
 - __getStatus__(messageId) - Retrieve status for message `messageId`
 
-_Above methods return promises._
+_Above methods return promises, see sample for how to chain further action on success / fail._
 
 ## Samples
 
