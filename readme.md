@@ -19,7 +19,7 @@ _Note: Module is compatible with browserify_
 
 To send an SMS, simply call the `send()` method, as in this simple example: 
 
-	var sinchSms = require('../index.js')({
+	var sinchSms = require('sinch-request')({
 			key: 'YOUR_APPLICATION_KEY', 
 			secret: 'YOUR_APPLICATION_SECRET'
 		}); 
