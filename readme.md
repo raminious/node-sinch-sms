@@ -12,22 +12,24 @@ _Note: Module is compatible with browserify_
 
 ## Include in your project
 
-	var sinchSms = require('sinch-request')({
+	var sinchSms = require('sinch-sms')({
 			key: 'YOUR APPLICATION_KEY', 
 			secret: 'YOUR_APPLICATION_SECRET'
 		});
 
 To send an SMS, simply call the `send()` method, as in this simple example: 
 
-	var sinchSms = require('sinch-request')({
+	var sinchSms = require('sinch-sms')({
 			key: 'YOUR_APPLICATION_KEY', 
 			secret: 'YOUR_APPLICATION_SECRET'
 		}); 
 
 	sinchSms.send('+1555123456', 'Hello World!').then(function(response) {
 		//All good, response contains messageId
+		console.log(response);
 	}).fail(function(error) {
 		// Some type of error, see error object
+		console.log(error);
 	});
 
 For a more complete sample, including how to poll delivery status for a given messageId, please see the provided samples.
