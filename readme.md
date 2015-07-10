@@ -47,6 +47,8 @@ _Above methods return promises, see sample for how to chain further action on su
 
 See the `samples/` folder, for some basic usage examples. Samples work fine both in Node.js and in the browser by using browserify. 
 
+__Note:__ If you're using your sandbox application key, SMS can only be sent to numbers you have verified in the [Sinch dashboard](https://www.sinch.com/dashboard/). 
+
 First edit the relevant sample to ensure it got your credentials or user information. Then you can run the sample in Node using: 
 
 	$ node samples/SAMPLE_NAME.js
