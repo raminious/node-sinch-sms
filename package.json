@@ -1,0 +1,20 @@
+{
+  "name": "sinch-sms",
+  "version": "0.0.1",
+  "description": "Sinch module for sending SMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sinch",
+    "SMS",
+    "SDK"
+  ],
+  "author": "Magnus Lundstedt",
+  "license": "MIT",
+  "dependencies": {
+    "assert-plus": "^0.1.5",
+    "q": "^1.4.1"
+  }
+}
