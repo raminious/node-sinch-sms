@@ -1,7 +1,7 @@
 {
   "name": "sinch-sms",
-  "version": "0.0.3",
-  "description": "Sinch module for sending SMS",
+  "version": "0.0.4",
+  "description": "Send SMS globally from Node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,8 @@
   "keywords": [
     "Sinch",
     "SMS",
-    "SDK"
+    "SDK",
+    "browserify"
   ],
   "author": "Magnus Lundstedt",
   "license": "MIT",
