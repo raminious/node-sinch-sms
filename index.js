@@ -7,15 +7,15 @@ var smsManager = function(credentials, environment) {
 	assert.object(credentials, 'credentials');
 
 	this._creds = credentials;
-	this._environment = environment || {'messaging': 'messagingapi-01.sinch.com'};
+	this._environment = environment || {'messaging': 'messagingapi.sinch.com'};
 }
 
 smsManager.prototype.send = function(number, message) {
 	assert.string(number, 'number');
 	assert.string(message, 'message');
 
-	//Replace possible irrelevant characters
-	number = number.replace(/[-\s\(\)]/gi, '')
+	
+	number = number.replace(/[-\s\(\)]/gi, '') // Remove possible irrelevant characters
 
 	var deferred = Q.defer();
 
@@ -95,5 +95,11 @@ smsManager.prototype.getStatus = function(messageId) {
 	return deferred.promise;
 }
 
-module.exports = smsManager;
+module.exports = function(credentials, environment) {
+	assert.object(credentials, 'credentials');
+	assert.string(credentials.key, 'credentials.key');
+	assert.string(credentials.secret, 'credentials.secret');
+
+	return new smsManager(credentials, environment)
+};
 
