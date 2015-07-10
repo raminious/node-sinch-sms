@@ -1,6 +1,6 @@
 {
   "name": "sinch-sms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Sinch module for sending SMS",
   "main": "index.js",
   "scripts": {
