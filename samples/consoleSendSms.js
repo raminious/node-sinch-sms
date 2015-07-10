@@ -1,7 +1,10 @@
 // Send SMS from command line, using Sinch
 // Sample is compatible with browserify. (however, in that case, number/message input should be modified)
 
-var sinchSms = require('../index.js')({key: 'YOUR_APPLICATION_KEY', secret: 'YOUR_APPLICATION_SECRET'}); 
+var sinchSms = require('../index.js')({
+		key: 'YOUR_APPLICATION_KEY', 
+		secret: 'YOUR_APPLICATION_SECRET'
+	}); 
 
 var number = process.argv[2] || '+1555123456';
 var message = process.argv[3] || 'Hello World!';
