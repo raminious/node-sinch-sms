@@ -20,6 +20,7 @@ smsManager.prototype.send = function(number, message) {
 	var deferred = Q.defer();
 
 	var options = {
+		protocol: 'https:',
 		method: 'POST',
 		host: this._environment.messaging,
 		port: 443,
@@ -61,6 +62,7 @@ smsManager.prototype.getStatus = function(messageId) {
 	var deferred = Q.defer();
 
 	var options = {
+		protocol: 'https:',
 		method: 'GET',
 		host: this._environment.messaging,
 		port: 443,
