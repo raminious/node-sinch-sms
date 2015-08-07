@@ -1,6 +1,6 @@
 {
   "name": "sinch-sms",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Send SMS globally from Node",
   "main": "index.js",
   "scripts": {
