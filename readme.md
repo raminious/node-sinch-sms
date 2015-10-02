@@ -2,7 +2,7 @@
 
 Node module to send SMS world-wide from within a Node or web application (using Browserify). 
 
-Additional product information available [on our website](https://www.sinch.com/products/sms-api/).
+Additional information available [on our website](https://www.sinch.com/products/sms-api/).
 
 ## Installing
 
