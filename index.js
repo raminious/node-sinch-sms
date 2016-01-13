@@ -10,11 +10,12 @@ var smsManager = function(credentials, environment) {
 	this._environment = environment || {'messaging': 'messagingapi.sinch.com'};
 }
 
-smsManager.prototype.send = function(number, message) {
+smsManager.prototype.send = function(number, message, from) {
 	assert.string(number, 'number');
+	assert.string(from, 'from');
 	assert.string(message, 'message');
 
-	
+
 	number = number.replace(/[-\s\(\)]/gi, '') // Remove possible irrelevant characters
 
 	var deferred = Q.defer();
@@ -25,7 +26,7 @@ smsManager.prototype.send = function(number, message) {
 		host: this._environment.messaging,
 		port: 443,
 		path: '/v1/sms/'+number,
-		data: JSON.stringify({message: message}),
+		data: JSON.stringify({message: message, from: from}),
 		withCredentials: false, // For browserify
 	};
 
@@ -39,7 +40,7 @@ smsManager.prototype.send = function(number, message) {
 		response.on('end', function () {
 			try {
 				data = JSON.parse(data);
-			} 
+			}
 			catch(e) {}
 			finally {
 				if(response.statusCode != 200) {
@@ -80,7 +81,7 @@ smsManager.prototype.getStatus = function(messageId) {
 		response.on('end', function () {
 			try {
 				data = JSON.parse(data);
-			} 
+			}
 			catch(e) {}
 			finally {
 				if(response.statusCode != 200) {

@@ -1,5 +1,5 @@
 {
-  "name": "sinch-sms",
+  "name": "sinch-sms-sender",
   "version": "0.0.7",
   "description": "Send SMS globally from Node",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "SDK",
     "browserify"
   ],
-  "author": "Magnus Lundstedt",
+  "author": "Ramin Mousavi",
   "license": "MIT",
   "dependencies": {
     "assert-plus": "^0.1.5",
