@@ -1,32 +1,35 @@
+### This is a fork of [Node Sinch SMS](https://github.com/sinch/node-sinch-sms)
+#### I just add new property for setting From number when using dedicated sms numbers
+
 # Sinch SMS node module
 
-Node module to send SMS world-wide from within a Node or web application (using Browserify). 
+Node module to send SMS world-wide from within a Node or web application (using Browserify).
 
 Additional information available [on our website](https://www.sinch.com/products/sms-api/).
 
 ## Installing
 
-Install is straight forward using npm; 
+Install is straight forward using npm;
 
-	npm install sinch-sms --save
+	npm install sinch-sms-sender --save
 
 _Note: Module is compatible with browserify_
 
 ## Include in your project
 
 	var sinchSms = require('sinch-sms')({
-			key: 'YOUR APPLICATION_KEY', 
+			key: 'YOUR APPLICATION_KEY',
 			secret: 'YOUR_APPLICATION_SECRET'
 		});
 
-To send an SMS, simply call the `send()` method, as in this simple example: 
+To send an SMS, simply call the `send()` method, as in this simple example:
 
 	var sinchSms = require('sinch-sms')({
-			key: 'YOUR_APPLICATION_KEY', 
+			key: 'YOUR_APPLICATION_KEY',
 			secret: 'YOUR_APPLICATION_SECRET'
-		}); 
+		});
 
-	sinchSms.send('+1555123456', 'Hello World!').then(function(response) {
+	sinchSms.send('+1555123456', 'Hello World!','12023679460').then(function(response) {
 		//All good, response contains messageId
 		console.log(response);
 	}).fail(function(error) {
@@ -49,15 +52,15 @@ _Above methods return promises, see sample for how to chain further action on su
 
 ## Samples
 
-See the `samples/` folder, for some basic usage examples. Samples work fine both in Node.js and in the browser by using browserify. 
+See the `samples/` folder, for some basic usage examples. Samples work fine both in Node.js and in the browser by using browserify.
 
-__Note:__ If you're using your sandbox application key, SMS can only be sent to numbers you have verified in the [Sinch dashboard](https://www.sinch.com/dashboard/). 
+__Note:__ If you're using your sandbox application key, SMS can only be sent to numbers you have verified in the [Sinch dashboard](https://www.sinch.com/dashboard/).
 
-First edit the relevant sample to ensure it got your credentials or user information. Then you can run the sample in Node using: 
+First edit the relevant sample to ensure it got your credentials or user information. Then you can run the sample in Node using:
 
 	$ node samples/SAMPLE_NAME.js
 
-If you'd like to run it in the browser, first [browserify](http://browserify.org) the sample into a browser-compatible script using: 
+If you'd like to run it in the browser, first [browserify](http://browserify.org) the sample into a browser-compatible script using:
 
 	$ browserify samples/SAMPLE_NAME.js > sample_bundle.js
 
@@ -67,7 +70,7 @@ Include the bundle in a web project, by adding the following tag to your HTML fi
 
 Be sure to check the developer console for console output.
 
-## Feedback 
+## Feedback
 
 Questions and/or feedback on this module can be sent by contacting [dev@sinch.com](mailto:dev@sinch.com).
 
